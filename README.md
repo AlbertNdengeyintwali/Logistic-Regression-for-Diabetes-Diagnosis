@@ -65,4 +65,9 @@ The dataset includes the following independent variables:
 - **Age**: The age of the individual (Years).
 
 
+![Rplot](https://github.com/user-attachments/assets/1ffbe9cf-e7b7-44ff-933c-425cca584219)
+
+
+
+
 
