@@ -110,9 +110,6 @@ This section provides an overview of the logistic regression model used for pred
 Call:  glmrob(formula = Outcome ~ ., family = binomial, data = train_data,      method = "BY") 
 
 
-Call:  glmrob(formula = Outcome ~ ., family = binomial, data = train_data,      method = "BY") 
-
-
 Coefficients:
                            Estimate Std. Error z value Pr(>|z|)    
 (Intercept)              -8.1177733  0.8625303  -9.412  < 2e-16 ***
@@ -125,8 +122,132 @@ BMI                       0.0891310  0.0198886   4.482 7.41e-06 ***
 DiabetesPedigreeFunction  0.7250662  0.3979683   1.822  0.06847 .  
 Age                       0.0292910  0.0155226   1.887  0.05916 .
  ```
+#### Interpretation of Coefficients
 
+1. **Intercept (-8.11777)**:  
+   The intercept represents the log-odds of the outcome (having diabetes or not) when all predictors are zero. The negative intercept indicates that when all predictors are at their baseline, the likelihood of having diabetes is low. The p-value for the intercept is very small (**< 2e-16**), indicating it is highly statistically significant.
 
+2. **Pregnancies (0.08930)**:  
+   A positive coefficient for **Pregnancies** suggests that as the number of pregnancies increases, the log-odds of having diabetes increase. Each additional pregnancy increases the log-odds of having diabetes by 0.0893. The p-value (**0.08216**) is above the usual 0.05 threshold, indicating a **marginal** effect.
+
+3. **Glucose (0.03454)**:  
+   Higher glucose levels are associated with an increased likelihood of having diabetes. Each unit increase in glucose results in a 0.0345 increase in the log-odds of having diabetes. The very small p-value (**2.74e-15**) indicates that glucose is a **highly significant predictor** of diabetes.
+
+4. **BloodPressure (-0.01797)**:  
+   A negative coefficient for **BloodPressure** suggests that higher blood pressure is associated with a lower likelihood of having diabetes. For each unit increase in blood pressure, the log-odds of having diabetes decrease by 0.018. The p-value (**0.00604**) is statistically significant, indicating that blood pressure is an important predictor of diabetes.
+
+5. **SkinThickness (-0.00087)**:  
+   The coefficient for **SkinThickness** is close to zero, meaning it has a very weak effect on the likelihood of having diabetes. The p-value (**0.92393**) is much higher than 0.05, indicating that skin thickness is **not a statistically significant predictor**.
+
+6. **Insulin (-0.00145)**:  
+   The coefficient for **Insulin** is negative, suggesting that higher insulin levels might decrease the likelihood of having diabetes. However, the p-value (**0.25082**) indicates that insulin is **not statistically significant** in predicting diabetes.
+
+7. **BMI (0.08913)**:  
+   The positive coefficient for **BMI** suggests that higher BMI is associated with a higher likelihood of having diabetes. Each unit increase in BMI results in a 0.0891 increase in the log-odds of having diabetes. The very small p-value (**7.41e-06**) indicates that BMI is a **highly significant predictor** of diabetes.
+
+8. **DiabetesPedigreeFunction (0.72507)**:  
+   The coefficient for **DiabetesPedigreeFunction** is positive, suggesting that a higher value of this function increases the likelihood of having diabetes. Each unit increase in this function increases the log-odds of having diabetes by 0.7251. The p-value (**0.06847**) indicates a **marginally significant** relationship.
+
+9. **Age (0.02929)**:  
+   The positive coefficient for **Age** indicates that as age increases, the likelihood of having diabetes also increases. Each year increase in age results in a 0.0293 increase in the log-odds of having diabetes. The p-value (**0.05916**) is marginally significant, suggesting that age has a **moderate influence** on the likelihood of having diabetes.
+
+#### Summary of Significant Predictors
+
+- **Highly Significant Predictors (p-value < 0.05)**:
+  - Glucose
+  - BloodPressure
+  - BMI
+
+- **Marginally Significant Predictors (0.05 <= p-value < 0.1)**:
+  - Pregnancies
+  - DiabetesPedigreeFunction
+  - Age
+
+- **Non-Significant Predictors (p-value > 0.1)**:
+  - SkinThickness
+  - Insulin
+
+This model suggests that glucose levels, blood pressure, and BMI are the most important predictors of diabetes. Pregnancies, diabetes pedigree function, and age have some effect but are marginally significant. Skin thickness and insulin levels do not appear to significantly predict the outcome.
+
+### Confusion Matrix and Model Performance
+
+The confusion matrix provides a detailed view of the model's performance, showing the number of true positives (TP), false positives (FP), true negatives (TN), and false negatives (FN). Below is a summary of the confusion matrix and important performance metrics:
+
+```
+Confusion Matrix and Statistics
+
+          Reference
+Prediction   0   1
+         0 139  32
+         1  18  41
+                                          
+               Accuracy : 0.7826          
+                 95% CI : (0.7236, 0.8341)
+    No Information Rate : 0.6826          
+    P-Value [Acc > NIR] : 0.0005085       
+                                          
+                  Kappa : 0.4712          
+                                          
+ Mcnemar's Test P-Value : 0.0659921       
+                                          
+            Sensitivity : 0.8854          
+            Specificity : 0.5616          
+         Pos Pred Value : 0.8129          
+         Neg Pred Value : 0.6949          
+             Prevalence : 0.6826          
+         Detection Rate : 0.6043          
+   Detection Prevalence : 0.7435          
+      Balanced Accuracy : 0.7235
+```
+#### Confusion Matrix
+
+| Prediction | 0   | 1   |
+|------------|-----|-----|
+| **0**      | 139 | 32  |
+| **1**      | 18  | 41  |
+
+Where:
+- **True Negatives (TN)**: 139
+- **False Positives (FP)**: 32
+- **False Negatives (FN)**: 18
+- **True Positives (TP)**: 41
+
+#### Performance Metrics
+
+- **Accuracy**: 0.7826  
+  This indicates that 78.26% of the model’s predictions were correct.
+- **95% CI (Confidence Interval)**: (0.7236, 0.8341)  
+  The 95% confidence interval for the accuracy is between 72.36% and 83.41%, indicating the range within which the true accuracy is likely to fall.
+- **No Information Rate (NIR)**: 0.6826  
+  This is the accuracy that would be achieved if the model simply predicted the most frequent class (in this case, class 0). The model’s accuracy is higher than the NIR, indicating it is providing useful predictions.
+- **P-Value [Acc > NIR]**: 0.0005085  
+  This value indicates that the model’s accuracy is statistically significantly better than the No Information Rate. A low p-value (less than 0.05) suggests that the model performs significantly better than random guessing.
+- **Kappa Statistic**: 0.4712  
+  The kappa statistic measures agreement between the predicted and actual values, accounting for chance. A kappa value of 0.4712 suggests moderate agreement.
+- **McNemar's Test P-Value**: 0.0659921  
+  This test compares the proportion of incorrect predictions made by the model. A p-value greater than 0.05 suggests that there is no significant difference between the two types of errors (false positives and false negatives).
+
+#### Specific Performance Metrics
+
+- **Sensitivity**: 0.8854  
+  Sensitivity (or True Positive Rate) indicates that 88.54% of the actual positive cases were correctly identified by the model.
+- **Specificity**: 0.5616  
+  Specificity (or True Negative Rate) indicates that 56.16% of the actual negative cases were correctly identified.
+- **Positive Predictive Value**: 0.8129  
+  Precision indicates that 81.29% of the predicted positive cases were actually positive.
+- **Negative Predictive Value**: 0.6949  
+  Negative Predictive Value indicates that 69.49% of the predicted negative cases were actually negative.
+- **Prevalence**: 0.6826  
+  Prevalence refers to the proportion of the dataset that belongs to the positive class (class 1). In this case, approximately 68.26% of the instances in the dataset are in the positive class.
+- **Detection Rate**: 0.6043  
+  Detection Rate is the proportion of actual positives that are correctly detected by the model. In this case, 60.43% of the actual positives were detected by the model.
+- **Detection Prevalence**: 0.7435  
+  Detection Prevalence is the proportion of instances that the model predicted as positive. In this case, 74.35% of the predictions made by the model were for the positive class.
+- **Balanced Accuracy**: 0.7235  
+  Balanced accuracy is the average of sensitivity and specificity, which provides a more balanced evaluation when dealing with imbalanced classes. IIn this case, a balanced accuracy of 72.35% indicates that the model performs reasonably well in distinguishing between both the positive and negative classes, even when the class distribution is not equal. It reflects a good balance between correctly identifying both the true positives and true negatives.
+
+### :bulb: Key Performance Message
+- **Accuracy**: The model achieved an accuracy of **78.26%**, which is higher than the baseline accuracy of **68.26%**, indicating that the model is performing better and providing more valuable predictions.
 
 
 
