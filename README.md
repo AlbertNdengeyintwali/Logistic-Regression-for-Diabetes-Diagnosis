@@ -100,6 +100,27 @@ The general methodology we followed in this analysis consists of the following k
 
 ### box plots to check outliers of all explanatory variables
 
+![Rplot2](https://github.com/user-attachments/assets/ecf43254-c568-42b7-bc58-359d8cdfca12)
+
+### Model Overview
+
+This section provides an overview of the logistic regression model used for predicting the **Outcome** variable based on various predictors. Due to the presence of outliers in the dataset, a **robust logistic regression model** was used to minimize the influence of these outliers on the model's performance.
+
+```Call:  glmrob(formula = Outcome ~ ., family = binomial, data = train_data,      method = "BY") 
+
+
+Coefficients:
+                           Estimate Std. Error z value Pr(>|z|)    
+(Intercept)              -8.1177733  0.8625303  -9.412  < 2e-16 ***
+Pregnancies               0.0893022  0.0513738   1.738  0.08216 .  
+Glucose                   0.0345361  0.0043704   7.902 2.74e-15 ***
+BloodPressure            -0.0179712  0.0065450  -2.746  0.00604 ** 
+SkinThickness            -0.0008684  0.0090950  -0.095  0.92393    
+Insulin                  -0.0014535  0.0012657  -1.148  0.25082    
+BMI                       0.0891310  0.0198886   4.482 7.41e-06 ***
+DiabetesPedigreeFunction  0.7250662  0.3979683   1.822  0.06847 .  
+Age ```
+
 
 
 
