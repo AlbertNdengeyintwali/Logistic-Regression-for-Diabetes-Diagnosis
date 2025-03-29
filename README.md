@@ -46,3 +46,23 @@ $$
 $$
 \text{Log-Odds (Logit)} = \ln\left(\frac{P(Y = 1)}{P(Y = 0)}\right)
 $$
+
+## Problem Statement
+
+In this project, we analyzed a **Diabetes dataset** (CSV format) to study the factors influencing the presence of diabetes, as indicated by the **'Outcome'** variable. The dataset contains medical and demographic information about individuals, helping us explore potential relationships between key health metrics and the likelihood of developing diabetes.
+
+### Dataset Overview
+
+The dataset includes the following independent variables:
+
+- **Pregnancies**: Number of times the patient has been pregnant (Count).
+- **Glucose**: Plasma glucose concentration during an oral glucose tolerance test ( mg/dL).
+- **BloodPressure**: Diastolic blood pressure ($mm \quad Hg$).
+- **SkinThickness**: Thickness of skin fold measurements (mm).
+- **Insulin**: Serum insulin levels ($mu \quad U/ml$).
+- **BMI (Body Mass Index)**: A measure of body weight relative to height($kg /m^2$).
+- **DiabetesPedigreeFunction**: A score that represents genetic predisposition to diabetes (Dimensionless).
+- **Age**: The age of the individual (Years).
+
+
+
