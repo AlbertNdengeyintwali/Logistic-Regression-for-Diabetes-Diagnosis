@@ -56,11 +56,11 @@ In this project, we analyzed a **Diabetes dataset** (CSV format) to study the fa
 The dataset includes the following independent variables:
 
 - **Pregnancies**: Number of times the patient has been pregnant (Count).
-- **Glucose**: Plasma glucose concentration during an oral glucose tolerance test ( mg/dL).
-- **BloodPressure**: Diastolic blood pressure ($mm \quad Hg$).
+- **Glucose**: Plasma glucose concentration during an oral glucose tolerance test ( $mg/dL$).
+- **BloodPressure**: Diastolic blood pressure ($mm  Hg$).
 - **SkinThickness**: Thickness of skin fold measurements (mm).
 - **Insulin**: Serum insulin levels ($mu \quad U/ml$).
-- **BMI (Body Mass Index)**: A measure of body weight relative to height($kg /m^2$).
+- **BMI (Body Mass Index)**: A measure of body weight relative to height($kg/m^2$).
 - **DiabetesPedigreeFunction**: A score that represents genetic predisposition to diabetes (Dimensionless).
 - **Age**: The age of the individual (Years).
 
