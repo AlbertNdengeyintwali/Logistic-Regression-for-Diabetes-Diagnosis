@@ -57,7 +57,7 @@ The dataset includes the following independent variables:
 
 - **Pregnancies**: Number of times the patient has been pregnant (Count).
 - **Glucose**: Plasma glucose concentration during an oral glucose tolerance test ( $mg/dL$).
-- **BloodPressure**: Diastolic blood pressure ($mm  Hg$).
+- **BloodPressure**: Diastolic blood pressure ($mm \quad Hg$).
 - **SkinThickness**: Thickness of skin fold measurements (mm).
 - **Insulin**: Serum insulin levels ($mu \quad U/ml$).
 - **BMI (Body Mass Index)**: A measure of body weight relative to height($kg/m^2$).
