@@ -64,8 +64,44 @@ The dataset includes the following independent variables:
 - **DiabetesPedigreeFunction**: A score that represents genetic predisposition to diabetes (Dimensionless).
 - **Age**: The age of the individual (Years).
 
+## Methodology
+
+The general methodology we followed in this analysis consists of the following key steps:
+
+### 1. Data Preparation
+   - Loaded the dataset and performed an initial inspection to understand its structure.
+   - Checked for missing values and handled them appropriately through imputation or removal.
+   - Split the dataset into **training** and **testing** subsets to evaluate model performance.
+
+### 2. Exploratory Data Analysis (EDA)
+   - Visualized features using **histograms, box plots** to see distribution and checking outliers.
+   - Identified potential **outliers** and examined multicollinearity among predictors to ensure model stability.
+   - Assessed variable distributions and transformations needed for better model performance.
+
+### 3. Logistic Regression Model Building
+   - Selected **Logistic Regression (LR)** as our classification model since it is well-suited for binary outcomes.
+   - Trained the model using the **training dataset**, optimizing for accuracy and interpretability.
+   - Evaluated model performance using metrics such as **accuracy, precision, recall, and F1-score**.
+   - Used **ROC curves and AUC (Area Under the Curve)** to assess the model's ability to classify correctly.
+
+### 4. Interpretation of Coefficients and P-Values
+   - Examined the **regression coefficients** to understand how each independent variable influences diabetes risk.
+   - Analyzed **p-values** to determine which predictors significantly contribute to the model.
+   - Computed the **odds ratios** to quantify the impact of each variable on diabetes probability.
+   - Used the logistic function to calculate the probability of diabetes presence for given input values.
+
+## Results
+
+### Table showing detailed information
+
+### Histogram to see distribution of all explanatory variables
 
 ![Rplot](https://github.com/user-attachments/assets/1ffbe9cf-e7b7-44ff-933c-425cca584219)
+
+### box plots to check outliers of all explanatory variables
+
+
+
 
 
 
