@@ -124,9 +124,11 @@ You can click [here](https://www.kaggle.com/datasets/saurabh00007/diabetescsv/) 
 
 ![Rplot](https://github.com/user-attachments/assets/1ffbe9cf-e7b7-44ff-933c-425cca584219)
 
-### box plots to check outliers of all explanatory variables
+### Box plots to check outliers of all explanatory variables
 
 ![Rplot2](https://github.com/user-attachments/assets/ecf43254-c568-42b7-bc58-359d8cdfca12)
+
+Since we have observed the presence of outliers in the predictor variables through the boxplots, it is crucial to address the impact of these outliers on the model's performance. Outliers can disproportionately influence the estimates and predictions of a standard logistic regression model, leading to biased or unstable results. To mitigate this issue, I have decided to use a **robust logistic regression model**. This model is designed to be less sensitive to extreme values and can provide more reliable parameter estimates, ensuring that the model's predictions are not unduly influenced by outliers in the data. This approach will help improve the robustness and accuracy of the analysis.
 
 ### Model Overview
 
