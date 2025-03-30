@@ -302,7 +302,7 @@ $$
 Finally, using the logistic function:
 
 $$
-P(Y=1) = \dfrac{e^{1.11903}}{1 + e^{9961948}} \approx 0.73
+P(Y=1) = \dfrac{e^{9961948}}{1 + e^{9961948}} \approx 0.73
 $$
 
 Therefore, the predicted probability of having diabetes for this individual is approximately **73%**.
