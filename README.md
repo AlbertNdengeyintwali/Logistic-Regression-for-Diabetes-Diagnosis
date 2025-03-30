@@ -310,6 +310,11 @@ Therefore, the predicted probability of having diabetes for this individual is a
 This high probability suggests a significant likelihood of diabetes presence for the given input values.
 
 
+ ## Ownership
+This project is owned and created by **Albert Ndengeyintwali**.
+
+© 2025 Albert Ndengeyintwali. All rights reserved.
+
 
 
 
