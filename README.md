@@ -276,6 +276,8 @@ When calculating The F1-score we get `F1-Score: 0.850931677018633` which is the 
 
 ### ROC Curve Interpretation
 
+![Roc_curve](https://github.com/user-attachments/assets/1730f76f-57b8-4da6-b00c-41123dab8101)
+
 The ROC curve I generated visually represents my model’s ability to distinguish between diabetic and non-diabetic cases across different classification thresholds.
 
 1. **Understanding My ROC Curve**
