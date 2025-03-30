@@ -276,15 +276,11 @@ When calculating The F1-score we get `F1-Score: 0.850931677018633` which is the 
 
 ### ROC Curve Interpretation
 
-![Roc_curve](https://github.com/user-attachments/assets/1730f76f-57b8-4da6-b00c-41123dab8101)
+![Rock_Curve_best](https://github.com/user-attachments/assets/2f14db8c-57c4-4c80-ac8b-2952f18da437)
 
 The ROC curve I generated visually represents my model’s ability to distinguish between diabetic and non-diabetic cases across different classification thresholds.
 
-1. **Understanding My ROC Curve**
-   - The x-axis (1 - Specificity) represents the false positive rate (FPR) cases incorrectly classified as diabetic.
-   - The y-axis (Sensitivity) represents the true positive rate (TPR) cases correctly identified as diabetic.
-   - The closer the ROC curve is to the top-left corner, the better the model is at distinguishing between the two classes.
-3. **AUC Score: 0.8436**
+- **Area Under the Curve (AUC) Score: 0.8436**
    - My model achieved an AUC (Area Under the Curve) of 0.8436, meaning it has an 84.36% probability of correctly ranking a randomly chosen diabetic case higher than a non-diabetic case.
    - Since an AUC of 0.80 - 0.89 is considered good, my model has a strong ability to differentiate between the two classes.
 
