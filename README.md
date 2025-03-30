@@ -249,6 +249,36 @@ Where:
 ### :bulb: Key Performance Message
 - **Accuracy**: The model achieved an accuracy of **78.26%**, which is higher than the baseline accuracy of **68.26%**, indicating that the model is performing better and providing more valuable predictions.
 
+### Predicted Probability of Diabetes
+
+Using the logistic regression formula, the probability of having diabetes based on the individual with the first observations :
+
+- Pregnancies: 6
+- Glucose: 148
+- BloodPressure: 72
+- SkinThickness: 35
+- Insulin: 0
+- BMI: 33.6
+- DiabetesPedigreeFunction: 0.627
+- Age: 50
+
+We can calculate the logit as:
+
+$$
+\text{logit}(P) = -8.1177733 + (0.0893022 \times 6) + (0.0345361 \times 148) + (-0.0179712 \times 72) + (-0.0008684 \times 35) + (-0.0014535 \times 0) + (0.0891310 \times 33.6) + (0.7250662 \times 0.627) + (0.0292910 \times 50) \approx 0.8088096
+$$
+
+Finally, using the logistic function:
+
+$$
+P(Y=1) = \dfrac{e^{1.11903}}{1 + e^{1.11903}} \approx 0.7538
+$$
+
+Therefore, the predicted probability of having diabetes for this individual is approximately **75.38%**.
+
+This high probability suggests a significant likelihood of diabetes presence for the given input values.
+
+
 
 
 
