@@ -253,14 +253,11 @@ Where:
 
 Using the logistic regression formula, the probability of having diabetes based on the individual with the first observations :
 
-- Pregnancies: 6
-- Glucose: 148
-- BloodPressure: 72
-- SkinThickness: 35
-- Insulin: 0
-- BMI: 33.6
-- DiabetesPedigreeFunction: 0.627
-- Age: 50
+- Pregnancies: 6         - BloodPressure: 72           - Insulin: 0           - DiabetesPedigreeFunction: 0.627
+- Age: 50                - BMI: 33.6                   - SkinThickness: 35    - Glucose: 148
+
+
+
 
 We can calculate the logit as:
 
