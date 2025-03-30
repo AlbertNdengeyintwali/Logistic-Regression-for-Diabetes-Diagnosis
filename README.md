@@ -1,7 +1,7 @@
 # Logistic Regression for Diabetes Diagnosis: Insights from Patient Data
 ## Introduction
 
-Logistic regression is a powerful and widely used statistical analysis method that is employed to model the relationship between a binary dependent variable and one or more independent variables. It is particularly useful in situations where the outcome is a binary variable—such as predicting whether an individual has a disease (like diabetes) or not, based on several factors. 
+Logistic regression is a powerful and widely used statistical analysis method that is employed to model the relationship between a binary dependent variable and one or more independent variables. It is particularly useful in situations where the outcome is a binary variable such as predicting whether an individual has a disease (like diabetes) or not, based on several factors. 
 
 Unlike linear regression, which models the relationship between independent variables and a continuous dependent variable, logistic regression is used when the dependent variable is categorical, typically binary. For example, in medical research, logistic regression can be applied to predict the probability of a patient having a disease based on a set of predictor variables like age, weight, blood pressure, etc.
 
@@ -272,8 +272,22 @@ Where:
 - **Balanced Accuracy**: 0.7235  
   Balanced accuracy is the average of sensitivity and specificity, which provides a more balanced evaluation when dealing with imbalanced classes. IIn this case, a balanced accuracy of 72.35% indicates that the model performs reasonably well in distinguishing between both the positive and negative classes, even when the class distribution is not equal. It reflects a good balance between correctly identifying both the true positives and true negatives.
 
+When calculating The F1-score we get `F1-Score: 0.850931677018633` which is the harmonic mean of precision and recall, balancing both metrics that suggests a good balance between precision and recall.
+
+### ROC Curve Interpretation
+
+The ROC curve I generated visually represents my model’s ability to distinguish between diabetic and non-diabetic cases across different classification thresholds.
+
+1. **Understanding My ROC Curve**
+   - The x-axis (1 - Specificity) represents the false positive rate (FPR) cases incorrectly classified as diabetic.
+   - The y-axis (Sensitivity) represents the true positive rate (TPR) cases correctly identified as diabetic.
+   - The closer the ROC curve is to the top-left corner, the better the model is at distinguishing between the two classes.
+3. **AUC Score: 0.8436**
+   - My model achieved an AUC (Area Under the Curve) of 0.8436, meaning it has an 84.36% probability of correctly ranking a randomly chosen diabetic case higher than a non-diabetic case.
+   - Since an AUC of 0.80 - 0.89 is considered good, my model has a strong ability to differentiate between the two classes.
+
 ### :bulb: Key Performance Message
-- **Accuracy**: The model achieved an accuracy of **78.26%**, which is higher than the baseline accuracy of **68.26%**, indicating that the model is performing better and providing more valuable predictions.
+- **Accuracy**: The model achieved an accuracy of **78.26%**, which is higher than the baseline accuracy of **68.26%**, indicating that the model is performing better and providing more valuable predictions. Again An F1-score of **85%** confirms a strong overall performance.
 
 ### Predicted Probability of Diabetes
 
