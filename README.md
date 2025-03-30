@@ -177,7 +177,7 @@ Age                       0.017299   0.012336   1.402   0.1608
    The coefficient for **DiabetesPedigreeFunction** is positive, suggesting that a higher value of this function increases the likelihood of having diabetes. Each unit increase in this function increases the log-odds of having diabetes by 0.707081. The p-value (**0.1023**) indicates a **no statistically significant** relationship.
 
 9. **Age (0.017299)**:  
-   The positive coefficient for **Age** indicates that as age increases, the likelihood of having diabetes also increases. Each year increase in age results in a 0.017299 increase in the log-odds of having diabetes. The p-value (**0.1608**) is marginally significant, suggesting that age has **no influence** on the likelihood of having diabetes.
+   The positive coefficient for **Age** indicates that as age increases, the likelihood of having diabetes also increases. Each year increase in age results in a 0.017299 increase in the log-odds of having diabetes. The p-value (**0.1608**) is not significant, suggesting that age has **no influence** on the likelihood of having diabetes.
 
 
 This model suggests that Pregnancies, glucose levels, blood pressure, and BMI are the most important predictors of diabetes. diabetes pedigree function, Skin thickness and insulin and age do not appear to significantly predict the outcome.
