@@ -265,7 +265,10 @@ Using the logistic regression formula, the probability of having diabetes based 
 We can calculate the logit as:
 
 $$
-\text{logit}(P) = -8.1177733 + (0.0893022 \times 6) + (0.0345361 \times 148) + (-0.0179712 \times 72) + (-0.0008684 \times 35) + (-0.0014535 \times 0) + (0.0891310 \times 33.6) + (0.7250662 \times 0.627) + (0.0292910 \times 50) \approx 0.8088096
+\begin{align*}
+\text{logit}(P) &= -8.1177733 + (0.0893022 \times 6) + (0.0345361 \times 148) + (-0.0179712 \times 72) + (-0.0008684 \times 35)\\
+& + (-0.0014535 \times 0) + (0.0891310 \times 33.6) + (0.7250662 \times 0.627) + (0.0292910 \times 50) \approx 1.11903
+\end{align*}
 $$
 
 Finally, using the logistic function:
